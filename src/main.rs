@@ -27,7 +27,7 @@ impl Render for HelloWorld {
 #[tokio::main]
 async fn main() {
     App::new().run(|cx: &mut AppContext| {
-        cx.foreground_executor()
+        cx.background_executor()
             .spawn(async move {
                 let client = get_client().await;
                 let public_key = PublicKey::from_bech32(TEST_USER).unwrap();
