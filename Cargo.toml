@@ -1,0 +1,10 @@
+[package]
+name = "gpui-app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+gpui = { git = "https://github.com/zed-industries/zed" }
+nostr-sdk = { version = "0.37", features = ["lmdb", "all-nips"] }
+tokio = { version = "1", features = ["full"] }
+dirs = "5.0"
