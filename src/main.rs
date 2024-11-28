@@ -24,7 +24,8 @@ impl Render for HelloWorld {
     }
 }
 
-fn main() {
+#[tokio::main]
+async fn main() {
     App::new().run(|cx: &mut AppContext| {
         cx.foreground_executor()
             .spawn(async move {
